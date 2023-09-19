@@ -8,7 +8,6 @@
  */
 int main(int ac, char **av)
 {
-char **cmd = NULL;
 char *input = NULL;
 int checking = 0;
 void (ac);
