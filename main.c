@@ -2,11 +2,9 @@
 #include <stdio.h>
 /**
  * main - our main shell function
- * @ac: numbering parameters
- * @av: argument vector
  * Return: 0(success).
  */
-int main(int ac, char **av)
+int main(void)
 {
 char *input = NULL;
 int checking = 0;
