@@ -10,4 +10,6 @@
 #include <sys/wait.h>
 #include <sys/stat.h>
 
+char *read_input(void);
+
 #endif
