@@ -10,8 +10,6 @@ int main(int ac, char **av)
 {
 char *input = NULL;
 int checking = 0;
-void (ac);
-void (av);
 
 while (true)
 {
