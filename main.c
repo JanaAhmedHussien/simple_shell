@@ -11,7 +11,7 @@ int main(int ac, char **av)
 char *input = NULL;
 int checking = 0;
 
-while (true)
+while (1)
 {
 input = read_input();
 if (input == NULL)
@@ -25,7 +25,4 @@ return (checking);
 printf("%s", input);
 free(input);
 }
-
-
-
 }
