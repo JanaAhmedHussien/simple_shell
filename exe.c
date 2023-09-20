@@ -19,7 +19,7 @@ int _exe(char **cmd, char **argv)
 		{
 			perror(argv[0]);
 			_free(cmd);
-			exit(0);
+			exit(127);
 		}
 	}
 	else
