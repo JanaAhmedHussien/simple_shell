@@ -2,7 +2,7 @@
 #define MAIN_H
 #define DELIMETER " \t\n"
 
-extern char **environment;
+extern char **environ;
 
 #include <stdio.h>
 #include <stdlib.h>
