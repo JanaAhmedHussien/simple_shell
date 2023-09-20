@@ -6,7 +6,7 @@
  */
 char **str_token(char *input)
 {
-char *tok = NULL, *temporary = NULL, **cmd = NULL
+char *tok = NULL, *temporary = NULL, **cmd = NULL;
 int ctr = 0, j = 0;
 if (!input)
 return (NULL);

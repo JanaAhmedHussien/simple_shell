@@ -7,7 +7,7 @@
 int main(void)
 {
 char *input = NULL;
-int checking = 0;
+int checking = 0, j;
 char **cmd = NULL;
 while (1)
 {
@@ -25,7 +25,7 @@ free(input);
 cmd = str_token(input);
 if (cmd == NULL)
 continue;
-for (int j = 0; cmd[j]; j++)
+for (j = 0; cmd[j]; j++)
 {
 printf("%s\n", cmd[j]);
 free(cmd[j]), cmd[j] = NULL;
