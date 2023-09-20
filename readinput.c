@@ -11,7 +11,7 @@ char *read_input(void)
 	ssize_t nread;
 
 	if (isatty(STDIN_FILENO))
-		write(STDOUT_FILENO, " ", 1);
+		write(STDOUT_FILENO, "$ ", 2);
 	nread = getline(&line, &len, stdin);
 	if (nread == -1)
 	{
