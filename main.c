@@ -8,7 +8,7 @@ int main(void)
 {
 char *input = NULL;
 int checking = 0;
-
+char **cmd = NULL;
 while (1)
 {
 input = read_input();
@@ -22,5 +22,14 @@ return (checking);
 }
 printf("%s", input);
 free(input);
+cmd = str_token(input);
+if (cmd == NULL)
+continue;
+for (int j = 0; cmd[j]; j++)
+{
+printf("%s\n", cmd[j]);
+free(cmd[j]), cmd[j] = NULL;
+}
+free(cmd), cmd = NULL;
 }
 }
