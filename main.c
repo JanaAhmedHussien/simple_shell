@@ -2,13 +2,16 @@
 #include <stdio.h>
 /**
  * main - our main shell function
+ * @ac: arguments count
+ * @argv: argument vector
  * Return: 0(success).
  */
-int main(void)
+int main(int ac, char **argv)
 {
 char *input = NULL;
-int checking = 0, j;
+int checking = 0;
 char **cmd = NULL;
+(void) ac;
 while (1)
 {
 input = read_input();
@@ -20,16 +23,9 @@ write(STDOUT_FILENO, "\n", 1);
 }
 return (checking);
 }
-printf("%s", input);
-free(input);
 cmd = str_token(input);
 if (cmd == NULL)
 continue;
-for (j = 0; cmd[j]; j++)
-{
-printf("%s\n", cmd[j]);
-free(cmd[j]), cmd[j] = NULL;
-}
-free(cmd), cmd = NULL;
+checking = _exe(cmd, argv);
 }
 }
