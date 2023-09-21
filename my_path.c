@@ -26,7 +26,7 @@ folder = strtok(environment_pth, ":");
 while (folder)
 {
 all_input = malloc(1 + _strlen(folder) + _strlen(cmd) + 1);
-if (all_input == 1)
+if (all_input)
 {
 _strcpy(all_input, folder);
 _strcat(all_input, "/");
