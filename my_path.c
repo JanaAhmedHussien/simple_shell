@@ -7,8 +7,8 @@
 char *_path(char *cmd)
 {
 int j;
-struct stat st;
-struct stat *ptr = &st;
+struct stat status;
+struct stat *ptr = &status;
 char *environment_pth, *folder, *all_input;
 for (j = 0; cmd[j]; j++)
 {
@@ -33,13 +33,13 @@ _strcat(all_input, "/");
 _strcat(all_input, cmd);
 if (stat(all_input, ptr) == 0)
 {
-free(environment_pth);
+free(environment_pth), environment_pth = NULL;
 return (all_input);
 }
 free(all_input), all_input = NULL;
 folder = strtok(NULL, ":");
 }
 }
-free(environment_pth);
+free(environment_pth), environment_pth = NULL;
 return (NULL);
 }
