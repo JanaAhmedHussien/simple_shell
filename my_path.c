@@ -8,12 +8,13 @@ char *_path(char *cmd)
 {
 int j;
 struct stat status;
+struct stat *ptr = &status;
 char *environment_pth, *folder, *all_input;
 for (j = 0; cmd[j]; j++)
 {
 if (cmd[j] == '/')
 {
-if (stat(cmd, &status) == 0)
+if (stat(cmd, ptr) == 0)
 return (_strdup(cmd));
 return (NULL);
 }
@@ -30,7 +31,7 @@ if (all_input)
 _strcpy(all_input, folder);
 _strcat(all_input, "/");
 _strcat(all_input, cmd);
-if (stat(all_input, &status) == 0)
+if (stat(all_input, ptr) == 0)
 {
 free(environment_pth);
 return (all_input);
