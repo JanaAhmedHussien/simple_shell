@@ -22,9 +22,13 @@ int _strcmp(char *s1, char *s2);
 char *_strcpy(char *dest, char *src);
 char *_strcat(char *dest, char *src);
 char *_strdup(const char *str);
+char *_itoa(int i);
+void _strrev(char *s, int lenth);
 
 void _free(char **arr);
-int _exe(char **cmd, char **argv);
-char *_env(char *var)
+int _exe(char **cmd, char **argv, int in);
+char *_env(char *var);
 char *_path(char *cmd);
+void _perror(char *name, char *input, int in);
+
 #endif
