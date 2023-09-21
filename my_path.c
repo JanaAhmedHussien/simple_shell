@@ -8,13 +8,12 @@ char *_path(char *cmd)
 {
 int j;
 struct stat status;
-struct stat *ptr = &status;
 char *environment_pth, *folder, *all_input;
 for (j = 0; cmd[j]; j++)
 {
 if (cmd[j] == '/')
 {
-if (stat(cmd, ptr) == 0)
+if (stat(cmd, &status) == 0)
 return (_strdup(cmd));
 return (NULL);
 }
@@ -25,21 +24,21 @@ return (NULL);
 folder = strtok(environment_pth, ":");
 while (folder)
 {
-all_input = malloc(1 + _strlen(folder) + _strlen(cmd) + 1);
+all_input = malloc(_strlen(folder) + _strlen(cmd) + 2);
 if (all_input)
 {
 _strcpy(all_input, folder);
 _strcat(all_input, "/");
 _strcat(all_input, cmd);
-if (stat(all_input, ptr) == 0)
+if (stat(all_input, &status) == 0)
 {
-free(environment_pth), environment_pth = NULL;
+free(environment_pth);
 return (all_input);
 }
 free(all_input), all_input = NULL;
 folder = strtok(NULL, ":");
 }
 }
-free(environment_pth), environment_pth = NULL;
+free(environment_pth);
 return (NULL);
 }
