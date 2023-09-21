@@ -9,7 +9,7 @@
 int main(int ac, char **argv)
 {
 char *input = NULL;
-int checking = 0;
+int checking = 0, i = 0;
 char **cmd = NULL;
 (void) ac;
 while (1)
@@ -23,9 +23,10 @@ write(STDOUT_FILENO, "\n", 1);
 }
 return (checking);
 }
+i++;
 cmd = str_token(input);
 if (cmd == NULL)
 continue;
-checking = _exe(cmd, argv);
+checking = _exe(cmd, argv, i);
 }
 }
