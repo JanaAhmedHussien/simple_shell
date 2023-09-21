@@ -7,8 +7,8 @@
 char *_path(char *cmd)
 {
 int j;
-struct stat status;
-struct stat *ptr = &status;
+struct stat st;
+struct stat *ptr = &st;
 char *environment_pth, *folder, *all_input;
 for (j = 0; cmd[j]; j++)
 {
