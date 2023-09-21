@@ -26,5 +26,5 @@ char *_strdup(const char *str);
 void _free(char **arr);
 int _exe(char **cmd, char **argv);
 char *_env(char *var)
-
+char *_path(char *cmd);
 #endif
