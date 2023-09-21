@@ -40,7 +40,7 @@ char *_itoa(int i)
 	buf[a] = '\0';
 	_strrev(buf, a);
 
-	return (_stdup(buf));
+	return (_strdup(buf));
 }
 
 /**
