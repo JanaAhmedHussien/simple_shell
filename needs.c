@@ -68,7 +68,7 @@ void _perror(char *name, char *input, int in)
 	write(STDERR_FILENO, input, _strlen(input));
 	write(STDERR_FILENO, output, _strlen(output));
 
-	free(idx);
+	free(idx), idx = NULL;
 }
 
 
