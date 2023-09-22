@@ -32,10 +32,13 @@ char *_itoa(int i)
 
 	if (i == 0)
 		buf[a++] = '0';
-	while (i > 0)
+	else
 	{
-		buf[a++] = (i % 10) + '0';
-		i /= 10;
+		while (i > 0)
+		{
+			buf[a++] = (i % 10) + '0';
+			i /= 10;
+		}
 	}
 	buf[a] = '\0';
 	_strrev(buf, a);
