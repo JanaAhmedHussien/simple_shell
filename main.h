@@ -27,8 +27,15 @@ void _strrev(char *s, int lenth);
 
 void _free(char **arr);
 int _exe(char **cmd, char **argv, int in);
-char *_env(char *var);
 char *_path(char *cmd);
 void _perror(char *name, char *input, int in);
+
+/* The Environment */
+char *_env(char *var);
+void _penv(char **cmd, int *checking);
+
+/* Built-in Functions */
+int is_pre_fun(char *cmd);
+void h_pre_fun(char **cmd, char **argv, int *checking, int in);
 
 #endif
