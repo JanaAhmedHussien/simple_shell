@@ -10,6 +10,7 @@ int main(int ac, char **argv)
 {
 char *input = NULL;
 int checking = 0, i = 0;
+int *ptr = &checking;
 char **cmd = NULL;
 (void) ac;
 while (1)
@@ -27,6 +28,9 @@ i++;
 cmd = str_token(input);
 if (cmd == NULL)
 continue;
+if (is_pre_fun(cmd[0]))
+h_pre_fun(cmd, argv, ptr, i);
+else
 checking = _exe(cmd, argv, i);
 }
 }
