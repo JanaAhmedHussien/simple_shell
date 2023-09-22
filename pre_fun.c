@@ -7,8 +7,7 @@
  */
 int is_pre_fun(char *cmd)
 {
-	char pre_funs[] = {"exit", "env", "setenv",
-		"cd", NULL};
+	char *pre_funs[] = {"exit", "env", "setenv", "cd", NULL};
 	int a;
 
 	for (a = 0; pre_funs[a]; a++)
