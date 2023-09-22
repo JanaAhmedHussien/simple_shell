@@ -31,7 +31,7 @@ int is_pre_fun(char *cmd)
 void h_pre_fun(char **cmd, char **argv, int *checking, int in)
 {
 	if (_strcmp(cmd[0], "exit") == 0)
-		_exit(cmd, argv, checking, in);
+		_out(cmd, argv, checking, in);
 	else if (_strcmp(cmd[0], "env") == 0)
 		_penv(cmd, checking);
 }
