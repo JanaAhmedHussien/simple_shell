@@ -25,7 +25,7 @@ return (checking);
 }
 i++;
 cmd = str_token(input);
-if (cmd == NULL)
+if (!cmd)
 continue;
 checking = _exe(cmd, argv, i);
 }
