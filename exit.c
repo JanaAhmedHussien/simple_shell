@@ -1,12 +1,12 @@
 #include "main.h"
 /**
- * _exit - exits the shell.
+ * _out - exits the shell.
  * @cmd: the command that i enter to the shell.
  * @argv: argument vector.
  * @checking: to chech the status of the command.
  * @i: index.
  */
-void _exit(char **cmd, char **argv, int *checking, int i)
+void _out(char **cmd, char **argv, int *checking, int i)
 {
 int val = (*checking);
 char *j;
