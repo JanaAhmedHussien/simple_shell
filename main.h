@@ -37,5 +37,7 @@ void _penv(char **cmd, int *checking);
 /* Built-in Functions */
 int is_pre_fun(char *cmd);
 void h_pre_fun(char **cmd, char **argv, int *checking, int in);
-
+int _pos(char *s);
+int _atoi(char *s);
+void _exit(char **cmd, char **argv, int *checking, int i);
 #endif
